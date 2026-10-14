@@ -31,6 +31,12 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Check PHP and Composer versions
+        run: |
+          php -v
+          composer --version
+          composer validate
+
       - name: Setup Application
         run: composer setup
 
